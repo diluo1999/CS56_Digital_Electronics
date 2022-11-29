@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Thu Aug 18 17:26:28 2022
+# Process ID: 2904
+# Current directory: P:/22summer/engs031/group_12/prototype2/Di/Vivado/prototype_2.runs/synth_1
+# Command line: vivado.exe -log TicTacToe_shell.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TicTacToe_shell.tcl
+# Log file: P:/22summer/engs031/group_12/prototype2/Di/Vivado/prototype_2.runs/synth_1/TicTacToe_shell.vds
+# Journal file: P:/22summer/engs031/group_12/prototype2/Di/Vivado/prototype_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source TicTacToe_shell.tcl -notrace

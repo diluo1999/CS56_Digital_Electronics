@@ -1,0 +1,85 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Thu Aug 18 17:28:03 2022
+| Host         : mecha-9 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file TicTacToe_shell_control_sets_placed.rpt
+| Design       : TicTacToe_shell
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    15 |
+| Unused register locations in slices containing registers |    86 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            2 |
+|      4 |            1 |
+|      6 |            1 |
+|      8 |            1 |
+|      9 |            8 |
+|     10 |            1 |
+|    16+ |            1 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              28 |           12 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              55 |           15 |
+| Yes          | No                    | No                     |              17 |           10 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              30 |           13 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+---------------------------------------------------------+------------------------------------------+------------------+----------------+
+|       Clock Signal      |                      Enable Signal                      |             Set/Reset Signal             | Slice Load Count | Bel Load Count |
++-------------------------+---------------------------------------------------------+------------------------------------------+------------------+----------------+
+|  clocking/CLK           | vga_control/v_counter                                   |                                          |                1 |              2 |
+|  clk_ext_port_IBUF_BUFG |                                                         |                                          |                1 |              2 |
+|  clocking/CLK           | game_logic_control/counter                              | game_logic_control/position_update_reset |                2 |              4 |
+|  clocking/CLK           | game_logic_control/FSM_sequential_curr_state[5]_i_1_n_0 |                                          |                6 |              6 |
+|  clocking/CLK           | vga_control/v_counter                                   | vga_control/v_counter[9]_i_1_n_0         |                5 |              8 |
+|  clocking/CLK           |                                                         | drop_monopulse/next_state[0]             |                2 |              9 |
+|  clocking/CLK           |                                                         | left_monopulse/next_state[0]             |                2 |              9 |
+|  clocking/CLK           |                                                         | right_monopulse/next_state[0]            |                2 |              9 |
+|  clocking/CLK           |                                                         | up_monopulse/next_state[0]               |                2 |              9 |
+|  clocking/CLK           |                                                         | down_monopulse/next_state[0]             |                2 |              9 |
+|  clocking/CLK           | game_logic_control/p2_position                          | game_logic_control/position_update_reset |                3 |              9 |
+|  clocking/CLK           | game_logic_control/p1_position                          | game_logic_control/position_update_reset |                3 |              9 |
+|  clocking/CLK           | game_logic_control/sf_position[8]_i_1_n_0               |                                          |                3 |              9 |
+|  clocking/CLK           |                                                         | vga_control/SR[0]                        |                5 |             10 |
+|  clocking/CLK           |                                                         |                                          |               11 |             26 |
++-------------------------+---------------------------------------------------------+------------------------------------------+------------------+----------------+
+
+
